@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보 게임</title>
+</head>
+<body>
+    <!-- 
+        1,2,3 숫자
+        홀수 = 1번사진
+        짝수 = 2번사진
+
+     -->
+
+     
+    <span class="computer">        
+        <img src="./images/random.jpg" alt="랜덤 이미지" id="img" width="300px">
+        <span id="randomNum"></span>
+    </span>
+    vs
+    <span class="me">        
+        <img src="./images/random.jpg" alt="랜덤 이미지" id="imgMe" width="300px">        
+    </span>
+    <button onclick="createRandomNum1()">가위</button>
+    <button onclick="createRandomNum2()">바위</button>
+    <button onclick="createRandomNum3()">보</button>
+    
+
+    <div id="gameResult"></div>
+    <script>
+
+        // 랜덤 함수 - 1,2,3이라는 숫자중 하나가 나오게됨        
+        const img = document.querySelector("#img");
+        const imgMe = document.querySelector("#imgMe");
+        const txt = document.querySelector("#randomNum"); 
+        const result = document.querySelector("#gameResult")
+
+        function createRandomNum1(){
+            createRandomNum();
+            imgMe.src="./images/random1.jpg";
+            imgMe.alt="가위"; 
+        }
+        function createRandomNum2(){
+            createRandomNum();
+            imgMe.src="./images/random2.jpg";
+            imgMe.alt="바위"; 
+        }
+
+        function createRandomNum3(){ //보
+            createRandomNum();
+            imgMe.src="./images/random3.jpg";
+            imgMe.alt="보";  
+        } 
+
+
+        function createRandomNum(){ 
+            const randomNum = Math.floor(Math.random()*3) +1;
+            if(randomNum == 1){ //가위 이미지
+                img.src="./images/random1.jpg";
+                img.alt="가위";
+                txt.innerText="가위";
+                
+            }else if(randomNum == 2){
+                img.src="./images/random2.jpg";
+                img.alt="바위";
+                txt.innerText="바위";
+            }else{
+                img.src="./images/random3.jpg";
+                img.alt="보";
+                txt.innerText="보";
+            } 
+        }
+
+        
+
+    </script>
+</body>
+</html>

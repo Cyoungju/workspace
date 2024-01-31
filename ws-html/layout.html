@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{border:1px solid #000;text-align: center;font-weight:bold}
+        #header{height:150px;background-color:orange;line-height: 150px;}
+        #nav{height:50px;background-color:#000;color:#fff;line-height: 50px;}
+        #footer{height:100px;background-color: #565656;color: #fff;line-height: 100px;}
+        .body{width:200px;height:400px;line-height: 400px;}
+        .body img{max-width: 100%;}
+        #box{display:flex;justify-content: space-between;align-items: stretch;}
+        #left{background-color:aqua}
+        #right{background-color:aquamarine}
+        /* #right,#left{width: calc((100% - 1200px)/2);} */
+        #center{width:1200px;background-color: coral;}
+    </style>
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="box">
+        <div id="left" class="body">left</div>
+        <div id="center" class="body">
+            center
+        </div>
+        <div id="right" class="body">right</div>
+    </div>
+    <div id="footer">footer</div>
+</body>
+</html>

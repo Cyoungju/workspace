@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>도서등록폼</h1>
+    <hr>
+    <!-- 쿼리스트링 -->
+    <form action="test.html" method="get">
+        책 제목 : <input type="text" name="title">
+        <br><br>
+        저자 : <input type="text" name="author">
+        <br><br>
+        장르 : 
+        <input type="radio" name="genre" id="ty1" value="novel">
+        <label for="ty1">소설</label>
+        <input type="radio" name="genre" id="ty2" value="poetry">
+        <label for="ty2">시</label>
+        <input type="radio" name="genre" id="ty3" value="esay">
+        <label for="ty3">에세이</label>
+        <!-- 다중선택 불가능 -->
+        <br><br>
+        <select name="genre1">
+            <option value="novel">소설</option>
+            <option value="poetry">시</option>
+            <option value="esay">에세이</option>
+        </select>
+        <br><br>
+        <input type="checkbox" name="cate" value="sf" id="cate1"><label for="cate1">SF</label>
+        <input type="checkbox" name="cate" value="thriller" id="cate2"><label for="cate2">스릴러</label>
+        <!-- 다중선택 가능 같은 이름에 여러개의 데이터 :  배열로 넘어감 -->
+
+        <br><br>
+        <textarea name="" id="" cols="100" rows="10"></textarea>
+
+        <br><br>
+        <input type="submit" value="등록">
+    </form>
+</body>
+</html>

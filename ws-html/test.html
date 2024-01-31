@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <h1 id="h" style="color:red">HHH</h1>
+    <h2 class="hTxt">HHH</h2>
+    <h3 class="hTxt">HHH</h3>
+    <h4>HHH</h4>
+    <h5>HHH</h5>
+    <h6>HHH</h6>
+
+    <div></div> 
+    <!-- 블록 속성 -->
+    <span></span>
+    <!-- 인라인 속성 -->
+
+    <button onclick="f()">run</button>
+    <!-- 버튼이 클릭되면 f()가 실행됨(함수 호출) -->
+
+    <button onclick="returnText()">run2</button>
+    <hr>
+    <h1>테이블</h1>
+    <br>
+    <table border="1" width="400">
+        <!-- 행과 열 - 행안에 열이 포함됨 -->
+        <tr> <!-- 행 rowspan -->
+            <td colspan="2">1</td><!-- 열 colspan --> 
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td> 
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <hr>
+    <h1>리스트</h1>
+    <br>
+    <!-- 순서 없음 -->
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+    </ul>
+
+    <!-- 순서 있음 -->
+    <ol>
+        <li>첫번째</li>
+        <li>두번째</li>
+    </ol>
+
+    <hr>
+    <h1>회원가입 폼</h1>
+    <form action="">
+        <input type="text" placeholder="아이디를 입력하세요"><br>
+        <input type="password" placeholder="비밀번호를 입력하세요">
+    
+    </form>
+    <script>
+        var h1Txt;
+        h1Txt = document.getElementById("h");  //아이디 전용함수
+        //h1Txt.innerText = "kkk";
+
+        // document.querySelector("#h"); //선택자 넣어주기 - 하나밖에 선택이 안됨
+        // document.querySelectorAll(".hTxt"); // 중복 선택자  
+
+        function f(){
+            //alert("hi");
+            console.log("hello"); //콘솔에서 확인
+            h1Txt.innerText = "kkk";
+        }
+
+        function returnText(){
+            h1Txt.innerText = "HHH";
+        }
+
+        
+    </script>
+</body>
+</html>
